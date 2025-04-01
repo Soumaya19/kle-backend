@@ -15,7 +15,10 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Database connection
-mongoose.connect('mongodb://127.0.0.1:27017/kleecom')
+
+let MONGODB_URL ='mongodb+srv://soumayahanamasagar1:ixuC1tmmcoHGmX0f@cluster0.1k30gia.mongodb.net/?retryWrites=true&w=majority'
+
+mongoose.connect( MONGODB_URL)
   .then(() => {
     console.log('DB connected');
   })
